@@ -27,7 +27,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script{
-                        docker.withRegistry('http://696502270513.dkr.ecr.ap-south-1.amazonaws.com/hemu007jenkins', 'ecr:ap-south-1:hemu007jenkins') {
+                        docker.withRegistry('http://696502270513.dkr.ecr.ap-south-1.amazonaws.com/hemu007jenkins', 'ecr:ap-south-1:hemuterraform') {
                     app.push("${env.BUILD_NUMBER}")
                     app.push("latest")
                     }
